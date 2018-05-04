@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @title == nil ? 'OnlineStyles' : @title %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'https://js.stripe.com/v3/', 'data-turbolinks-track': 'reload' %>
+    <%= tag :meta, name: "stripe_public_key", content: Rails.application.secrets.stripe_public_key %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <%= render 'layouts/header'%>
+    <% if current_page?(root_path)|| current_page?(root_path)%>
+    <%= render 'layouts/carousel'%>
+    <% end %>
+      <div class='container'>
+        <% flash.each do |key, msg| %>
+          <%= content_tag :div, msg, class: "flash #{key}" %>
+        <% end %>
+
+        <%= yield %>
+      </div>
+      <%= render 'layouts/footer'%>
+  </body>
+</html>

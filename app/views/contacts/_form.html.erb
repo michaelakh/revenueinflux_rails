@@ -1,0 +1,27 @@
+<%= form_tag({controller: "contacts", action: "send_email"}, method: "get") do %>
+
+  <div class="form-group">
+    <div class="field">
+      <%= label_tag :email %>
+      <%= text_field_tag :email,'', class: 'form-control', placeholder: 'Type in your E-mail Address, like tom@xyz.com' %>
+    </div>
+  </div> 
+  <div class="form-group">
+    <div class="field">
+      <%= label_tag :category %>
+      <%= select_tag(:category , options_for_select([['Please Choose A Category',''],['Schedule A Consultation','Schedule A Consultation'],['Service Information','Service Information'],['General Question',' General Question'],['refunds','refunds'],['Other','other']]),class: 'form-control') %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="field">
+      <%= label_tag :question %>
+      <%= text_area_tag(:question,'', class: 'form-control', placeholder: 'Type Your Question') %>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="actions">
+      <%= submit_tag 'Submit', class: 'btn btn-outline-success my-2 my-sm-0'  %>
+    </div>
+  </div>
+<% end %>
