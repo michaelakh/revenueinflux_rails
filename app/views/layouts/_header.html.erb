@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to "Automotive <br>Customer Finders".html_safe, root_path, class: "navbar-brand", style: 'font-family:carterone;font-size:1.7em;' %>
+          <%= link_to "Revenue <br>Influx".html_safe, root_path, class: "navbar-brand", style: 'font-family:carterone;font-size:1.7em;' %>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           
@@ -26,16 +26,18 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="dropdown-header">Find Customers in Car Servicing</li>
-                <li><a href="#">Window tinting</a></li>
-                <li><a href="#">Auto repair</a></li>
-                <li><a href="#">glass repair</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header"> Find Customers in Sales </li>
-                <li><a href="#">Car dealers</a></li>
-                <li><a href="#">Car rental</a></li>
-                <li><a href="#">Motorcycle dealers</a></li>
-
+                <li>
+                  <%= link_to 'All Services', services_path %>
+                </li>
+                <li>
+                  <%= link_to 'Automated Sales Funnels', sales_funnels_path %>
+                </li>
+                <li>
+                  <%= link_to 'Social Media Advertising', social_media_marketing_path %>
+                </li>
+                <li>
+                  <%= link_to 'SEO Search Engine Marketing', seo_marketing_path %>
+                </li>
               </ul>
             </li>
           </ul>

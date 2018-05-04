@@ -13,7 +13,7 @@ body {
 }
 
 html {
-  min-width:400px;
+  min-width:200px;
 }
 
 .blue-gradient {
@@ -251,8 +251,18 @@ img.img-box.img-product {
     width: 100vw;
     object-fit:cover;
   }
+  
+  div.carousel-caption {
+    bottom:2px;
+  }
+  
   div.carousel-caption .bg {
     font-size:1.2em;
+  }
+  
+  div.carousel-caption a.btn {
+    font-size:0.8em;
+    
   }
   
   h1.container.bg.title {

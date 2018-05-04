@@ -9,7 +9,12 @@ Rails.application.routes.draw do
   get 'email_confirm', to: 'contacts#email_confirm'
   get 'send_email', to: 'contacts#send_email'
   
-  get 'services', to:'pages#services'
+  # Services
+  get 'services', to:'services#services'
+  get 'social_media_marketing', to:'services#social_advertising'
+  get 'sales_funnels', to:'services#sales_funnels'
+  get 'seo_marketing', to:'services#seo_marketing'
+  
   get 'privacy', to:'pages#privacy'
   get 'terms', to:'pages#terms'
   get 'disclaimer', to:'pages#disclaimer'

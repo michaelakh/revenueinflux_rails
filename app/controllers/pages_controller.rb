@@ -5,9 +5,6 @@ class PagesController < ApplicationController
   def about
   end
   
-  def services
-  end
-  
   def privacy
   end
   
@@ -25,4 +22,6 @@ class PagesController < ApplicationController
   
   def meet_michael
   end
+  
+
 end
