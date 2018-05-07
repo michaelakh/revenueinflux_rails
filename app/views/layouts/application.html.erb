@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @title == nil ? 'Automotive Customer Finders' : @title %></title>
+    <title><%= @title == nil ? 'Revenue Influx' : @title %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'https://js.stripe.com/v3/', 'data-turbolinks-track': 'reload' %>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
