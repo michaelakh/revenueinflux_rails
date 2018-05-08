@@ -5,48 +5,78 @@
   
   .service-heading {
     font-size:1.5em;
+    margin-top:0px;
+  }
+  
+  .service-list-item {
+    position:relative;
+  }
+  
+  .service-list-image {
+    position:absolute;
+    top:-3px;
+    left:-25px;
+    width:35px;
+  }
+  ul.services {
+    list-style-type:none;
+  }
+  p.archivo {
+    font-family:"Archivo regular";
+    letter-spacing: 2px
   }
 </style>
 <div class='container'>
   <h1 class='center'>
     Services
   </h1>
-  <p class='center' style='font-size:1.2em;'>
+  <p class='center archivo' style='font-size:1.2em;color:#111;'>
     More traffic, more leads, more revenue. That’s our focus for you. Whether you are looking for an agency to run all of your marketing for you, are looking to maximize your next product launch, receive the most results-based consulting to maximize returns, or learn how to do it yourself, we have you covered.
   </p>
-  <ul class='row'>
-    <li class='col-sm-4'>
+  <h1 class='center' style=''>
+    Main Services Categories
+  </h1>
+  <br>
+  <ul class='row services '>
+    <li class='col-sm-4 service-list-item'>
+      <%= image_tag 'sales-funnel.png', alt:'sale funnel icon', class:'service-list-image' %>
       <h2 class="service-heading">Sales Funnels </h2>
       <p class="lead">
         The combination of highly optimized and converting landing pages, automated emails, and retargeting ads help build trust, credibility, and authority for your business and brand.
       </p>
     </li>
     <li class='col-sm-4'>
+      <%= image_tag 'icons-content-marketing.png', alt:'facebook icon', class:'service-list-image' %>
       <h2 class="service-heading">Facebook Advertising </h2>
       <p class="lead">
         We offer a comprehensive suite of Facebook advertising and management services. No matter your need or type of business our team of Facebook experts has a solution for you.
       </p>
     </li>
     <li class='col-sm-4'>
+      <%= image_tag 'icons-email-marketing1.png', alt:'ecommerce icon', class:'service-list-image' %>
       <h2 class="service-heading">Ecommerce </h2>
       <p class="lead">
         Do you have something to sell online? You need an ecommerce store. We’ve built ecommerce stores that generate millions online. Our ecommerce stores are built ready for traffic to convert.
       </p>
     </li>
-    </div>
+    </ul>
+    <ul class='row services'>
     <li class='col-sm-4'>
+      <%= image_tag 'icons-socialmedia-marketing.png', alt:'google ppc icon', class:'service-list-image' %>
       <h2 class="service-heading">Google Adwords (PPC) </h2>
       <p class="lead">
         Using Google’s search ads, we’re able to target people searching for your product or service. After completing keyword research for your business we create compelling copy, select the best keywords and set optimal bids for your AdWords campaigns.
       </p>
     </li>
     <li class='col-sm-4'>
+      <%= image_tag 'icons-search-seo.png', alt:'google ppc icon', class:'service-list-image' %>
       <h2 class="service-heading">Search Engine Optimization (SEO) </h2>
       <p class="lead">
         We are specialists in organic SEO, for both local and national businesses. Your website might be awesome but it won’t matter if your customers can’t find you in the search results when they are searching for the problem you solve, or the product or service you sell.
       </p>
     </li>
     <li class='col-sm-4'>
+      <%= image_tag 'icons-imbound1.png', alt:'retargeting icon', class:'service-list-image' %>
       <h2 class="service-heading">Retargeting Campaigns </h2>
       <p class="lead">
         If someone visits your website, you can deliver ads to them based on the pages they viewed on your site and how long they were on each page. If you have a video to use as an ad, you can retarget them based on what point they stopped watching the video. This makes every ad more contextual and relevant to the viewer of the ad, which results in more engaged traffic and higher conversion rates.
