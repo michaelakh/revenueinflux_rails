@@ -23,5 +23,9 @@ class PagesController < ApplicationController
   def meet_michael
   end
   
-
+  def facebook
+  end
+  
+  def instagram
+  end
 end

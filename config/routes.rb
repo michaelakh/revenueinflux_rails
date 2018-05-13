@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   
   get 'home', to:'pages#welcome'
   get 'about', to:'pages#about'
+  get 'create-facebook-ads-that-convert', to:'pages#facebook'
+  get 'top-12-useful-instagram-marketing-tools', to:'pages#instagram'
+  get 'top-10-tips-youtube-marketing', to:'pages#youtube'
+  
   
   # Contact Pages
   get 'contact', to: 'contacts#contact'
