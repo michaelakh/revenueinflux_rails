@@ -1,4 +1,98 @@
 <footer class="footer fixed-bottom">
+  <div class='footer-top'>
+    <div class='container'>
+      <div class='row'>
+
+        <div class='col-sm-4'>
+          <h1 class='footer-heading'>
+            About Us
+          </h1>
+          <p>
+            We’re a full-service <%= link_to 'digital marketing agency', services_path %> located in England London, and serving clients nationally. Driven by the success of our clients, we take great pride in the content marketing and online strategies we implement to drive website traffic <%= link_to 'Read More &raquo;'.html_safe, about_path%>
+          </p>
+        </div>
+
+        <div class='col-sm-4'>
+          <h1 class='footer-heading'>
+            Testimonials
+          </h1>
+          <div class="row">
+        <div class="col-md-12" data-wow-delay="0.2s">
+            <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                <!-- Bottom Carousel Indicators 
+                <ol class="carousel-indicators">
+                    <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/128.jpg" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="">
+                    </li>
+                </ol>
+                -->
+                <!-- Carousel Slides / Quotes -->
+                <div class="carousel-inner center">
+
+                    <!-- Quote 1 -->
+                    <div class="item active">
+                        <blockquote style=''>
+                            <div class="center">
+                                <p>
+                                  I loved working with revenue influx. They really helped me start my youtube career and got me over 20,000+ subscribers. They deliver what they promice and I'd recommend them to anyone who want more people to know about them or their business
+                                </p>
+                                <small>Prince (pshow)</small>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <!-- Quote 2 -->
+                    <div class="item">
+                        <blockquote>
+                            <div class="center">
+                                <p>
+                                  I used their Graphic design, and Video editing services and they also gave some really good social media marketing advice for free which got me 400+ followers on instagram in a month. It's been great working with them 
+                                </p>
+                                <small>Daniel A (@themysteryoftravel)</small>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <!-- Quote 3 -->
+                    <div class="item">
+                        <blockquote>
+                            <div class="center">
+                                <p>
+                                  You can rely on Revenue Influx to make sure your social media presence is in top form. On a scale of 1-10, they’re a 15.
+                                </p>
+                                <small>Oyin O</small>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+               <!-- Carousel Buttons Next/Prev -->
+                <a class="quote-left quote" href="#quote-carousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="quote-right quote" href="#quote-carousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class='col-sm-4'>
+          <h1 class='footer-heading'>
+            Contact Us
+          </h1>
+          <p>
+            Phone: 07958432219 <br>
+            Email: <%= link_to 'Send us an email', contact_path %> <br>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <div class='container'>
     <li>
       <%= link_to "Revenue Influx ©", root_path, class: "footer-brand", style: 'font-family:carterone;' %> |
