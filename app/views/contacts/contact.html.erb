@@ -1,22 +1,27 @@
 <% @title = 'Contact Us : Revenue Influx'%>
-
+<style>
+  div.recapture-custom div div {
+    margin:0 auto;
+  }
+</style>
 <div class="row">
   <div class="col-md-7 info-box">
     <h1>Contact Us</h1>
     <p>HOW CAN WE HELP YOU?
-      Call us at 07958432219 or please enter your email bellow. We want to make sure you get your questions answered quickly.
+      Call us at 07958432219.<br>
+      Or if you want to email us please complete the reCaptcha bellow and click 'Get our Email'. <br> We want to make sure you get your questions answered quickly.
     </p>
-    <p>
-      please complete reCaptcha bellow to prove you are human
-    </p>
+
     
   <%= form_tag({controller: "contacts", action: "email_confirm"}, method: "get") do %>
-
-    <%= recaptcha_tags %>
+      <div class='recapture-custom'>
+        <%= recaptcha_tags %>
+      </div>
+    
     <br>
     <div class="form-group">
-      <div class="actions">
-        <%= submit_tag 'Get our Email', class: 'btn btn-outline-success my-2 my-sm-0'  %>
+      <div class="actions center">
+        <%= submit_tag 'Get our Email', class: 'btn btn-primary my-2 my-sm-0'  %>
       </div>
     </div>
   <% end %>
