@@ -204,7 +204,29 @@ ul.normal {
   border-right:10px solid blue; 
 }
   
+// thumbnails
 
+  .thumb-post {
+    width:100%;
+    max-width:300px;
+  }
+  
+  a.thumb-text {
+    color:black;
+    text-decoration:none;
+    transition:0.5s;
+  }
+  
+  a.thumb-text:hover {
+    color:#888;
+    text-decoration:none;
+  }
+  
+  a.thumb-text p {
+    max-height:102px;
+    text-overflow:ellipsis;
+    overflow: hidden;
+  }
 // bootstrap custom styling
 .btn {
   transition:0.2s;
