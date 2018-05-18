@@ -3,27 +3,22 @@ class ContactsController < ApplicationController
   end
   
   def send_email
-    @user_info = User.where(email:params[:email]).first
-    
-    if @user_info.nil?
-      @user = "#{params[:email]} (Does not have an account)"
+    if verify_recaptcha
+      @user = "#{params[:email]}"
     else
-      @user = "#{@user_info.first_name} #{@user_info.last_name} | #{params[:email]} (Has an account at nucifera.co.uk) "
+      flash[:warning] = 'Please verify that you are not a robot'
+      redirect_to contact_path
+      return
     end
-    
     @subject = params[:category]
     @question = params[:question]
     
-     respond_to do |format|
       if ContactMailer.send_question_email(@user, @subject, @question).deliver
-        flash[:success] = 'Your message has been send'
-        format.html { redirect_to email_confirm_path}
-        format.json { render :show, status: :created, location: @card }
+        flash[:success] = 'Your message has been sent'
+        redirect_to email_confirm_path
       else
-        format.html { render :new }
-        format.json { render json: @card.errors, status: :unprocessable_entity }
+        render contact_path
       end
-    end
   end
   
   def email_confirm
